@@ -1,0 +1,44 @@
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  datasource:
+    username: root
+    password: standard@59315200
+    url: jdbc:mysql://localhost:3306/school?useUnicode=true&characterEncoding=UTF-8&useSSL=true&allowMultiQueries=true&serverTimezone=GMT%2B8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+    password: standard@59315200
+  cache:
+    type: redis
+    redis:
+      time-to-live: 20000 #缓存超时时间ms
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.my.coffee.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#logging:
+#  level:
+#    root: info
+#  path: D:/log/coffee
+#  file: coffee.log
+#  默认日志文件名
+#  file: log
+#  默认日志路径
+#  path: ./log
+
+#  logback.xml路径，默认为classpath:logback.xml
+#  config: logback.xml
+
+#  config:
+#server:
+#  port: 8081
+#  servlet:
+#    context-path: /coffee
+

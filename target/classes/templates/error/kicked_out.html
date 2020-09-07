@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <title>您已经被踢出登录</title>
+    <#--<link rel="stylesheet" type="text/css" href="${basePath}/css/reset.css"/>-->
+    <#--<link rel="stylesheet" type="text/less" href="${basePath}/css/error.less"/>-->
+    <link rel="icon" href="${basePath}/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="${basePath}/favicon.ico" />
+    <#--<script type="text/javascript" src="${basePath}/js/jquery-1.11.3.min.js"></script>-->
+    <#--<script type="text/javascript" src="${basePath}/js/less.js"></script>-->
+    <#--<script src="${basePath}/js/error/layer/layer.js"></script>-->
+    <#--<script src="${basePath}/js/shiro.demo.js"></script>-->
+</head>
+<body>
+<div id="wrapper"><a class="logo" href="/"></a>
+    <div id="main">
+        <div id="header">
+            <div style="width: 380px;height: 140px;position: absolute;top: 40%;left: 50%; margin-top: -70px;margin-left: -190px;">
+                <img style="width: 380px;" src="/img/error/kickedOut.png" alt="">
+                <p style="text-align: center;color: #666;">本账号已在其他地方登录，是否重新登录？
+                    <a href="#" style="color:#2095f3;" onclick="">是</a>
+                    <span style="color:#2095f3;margin: 0 6px;">/</span>
+                    <a href="#" style="color:#2095f3;" onclick="reload();">否</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function reload(){
+        window.location.reload();
+    }
+</script>
